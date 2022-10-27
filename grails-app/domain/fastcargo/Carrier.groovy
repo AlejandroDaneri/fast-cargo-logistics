@@ -1,8 +1,7 @@
 package fastcargo
 
-class Warehouse {
+class Carrier {
     String name
-    Location location
 
     static constraints = {
         name blank: false

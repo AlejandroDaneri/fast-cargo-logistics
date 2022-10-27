@@ -21,15 +21,15 @@ class OrderServiceSpec extends Specification {
         Location destination = [address: "Andres Baranda 100", city: city, zipCode: "B1579"]
         Location origin = [address: "Cabildo 215", city: city, zipCode: "B1679"]
         Warehouse warehouse = [name: "Zona Sur 3", location: [address: "Cabildo 215", city: city, zipCode: "B1679"] as Location]
-        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         order.save(flush: true, failOnError: true)
-        Order order2 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order2 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         order2.save(flush: true, failOnError: true)
-        Order order3 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order3 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         order3.save(flush: true, failOnError: true)
-        Order order4 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order4 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         order4.save(flush: true, failOnError: true)
-        Order order5 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order5 = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         order5.save(flush: true, failOnError: true)
 
         order5.id
@@ -83,7 +83,7 @@ class OrderServiceSpec extends Specification {
         Location destination = [address: "Andres Baranda 100", city: city, zipCode: "B1579"]
         Location origin = [address: "Cabildo 215", city: city, zipCode: "B1679"]
         Warehouse warehouse = [name: "Zona Sur 3", location: [address: "Cabildo 215", city: city, zipCode: "B1679"] as Location]
-        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
 
         orderService.save(order)
 

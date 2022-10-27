@@ -2,7 +2,7 @@ package fastcargo
 
 class Item {
     Float weight
-     String name
+    String name
 
     static constraints = {
         weight validator: {

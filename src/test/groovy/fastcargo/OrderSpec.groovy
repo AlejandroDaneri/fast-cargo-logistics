@@ -12,7 +12,7 @@ class OrderSpec extends Specification implements DomainUnitTest<Order> {
         Location destination = [address: "Andres Baranda 100", city: new City(), zipCode: "B1579"]
         Location origin = [address: "Cabildo 215", city: new City(), zipCode: "B1679"]
         Warehouse warehouse = [name: "Zona Sur 3", location: [address: "Cabildo 215", city: new City(), zipCode: "B1679"] as Location]
-        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse]
+        Order order = [sender: customer, pack: pack, origin: origin, destination: destination, warehouse: warehouse, label: new byte[]{(byte) 0xe0, 0x4f, 0x20}]
         then: "validation must succeed"
         order.validate()
     }

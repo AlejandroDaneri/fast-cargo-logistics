@@ -1,6 +1,6 @@
 package fastcargo
 
-class Warehouse {
+class CarrierHub {
     String name
     Location location
 
