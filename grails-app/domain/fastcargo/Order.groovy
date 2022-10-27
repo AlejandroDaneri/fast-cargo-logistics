@@ -1,7 +1,7 @@
 package fastcargo
 
 class Order {
-    Client sender
+    Customer sender
     Package pack
     Location destination
     Location origin

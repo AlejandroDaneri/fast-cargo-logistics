@@ -1,6 +1,6 @@
 package fastcargo
 
-class Client {
+class Customer {
     String name
     String email
 

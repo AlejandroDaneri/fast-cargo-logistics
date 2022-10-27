@@ -9,12 +9,12 @@ class OrderControllerSpec extends Specification implements ControllerUnitTest<Or
 
     def populateValidParams(params) {
         assert params != null
-        Client client = [name: "Pepe Perez", email: "a@a.com"]
+        Customer customer = [name: "Pepe Perez", email: "a@a.com"]
         Package pack = [width: 10, length: 10, height: 10, weight: 20]
         Location destination = [address: "Andres Baranda 100", city: new City(), zipCode: "B1579"]
         Location origin = [address: "Cabildo 215", city: new City(), zipCode: "B1679"]
         Warehouse warehouse = [name: "Zona Sur 3", location: [address: "Cabildo 215", city: new City(), zipCode: "B1679"] as Location]
-        params["sender"] = client
+        params["sender"] = customer
         params["pack"] = pack
         params["origin"] = origin
         params["destination"] = destination
